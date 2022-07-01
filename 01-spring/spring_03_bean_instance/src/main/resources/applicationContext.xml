@@ -6,7 +6,6 @@
     <!--方式一：构造方法实例化bean-->
     <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
 
-
     <!--方式二：使用静态工厂实例化bean-->
     <bean id="orderDao" class="com.itheima.factory.OrderDaoFactory" factory-method="getOrderDao"/>
 

@@ -6,6 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AppForInstanceBook {
     public static void main(String[] args) {
+        //通过无参构造起创建对象
 
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 
