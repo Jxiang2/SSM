@@ -1,0 +1,17 @@
+package com.itheima;
+
+import com.itheima.service.BookService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class AppForName {
+    public static void main(String[] args) {
+
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        //id, name都可以用来获取bean
+        BookService bookService = (BookService) ctx.getBean("bookService");
+
+        bookService.save();
+    }
+}
