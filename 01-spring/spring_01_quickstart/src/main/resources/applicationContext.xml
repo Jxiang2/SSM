@@ -5,6 +5,7 @@
 
     <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
     <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
-        <property name="bookDao" ref="bookDao"/>
+        <!--name对应类里面的set方法-->
+        <property name="bd" ref="bookDao"/>
     </bean>
 </beans>
