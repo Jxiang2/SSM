@@ -9,7 +9,7 @@ public class BookServiceImpl implements BookService, InitializingBean, Disposabl
     private BookDao bookDao;
 
     public void setBookDao(BookDao bookDao) {
-        System.out.println("set .....");
+        System.out.println("set dependencies.....");
         this.bookDao = bookDao;
     }
 

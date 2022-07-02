@@ -10,7 +10,7 @@
 
     <!--方法2-->
     <!--bean实现InitializingBean, DisposableBean接口的afterPropertiesSet()， destroy()方法-->
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl" destroy-method="anotherDestroy">
+    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
         <property name="bookDao" ref="bookDao"/>
     </bean>
 

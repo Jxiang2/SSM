@@ -8,9 +8,9 @@ public class BookServiceImpl implements BookService{
     private BookDao bookDao;
     private UserDao userDao;
 
-    public BookServiceImpl(BookDao bookDao, UserDao userDao) {
-        this.bookDao = bookDao;
-        this.userDao = userDao;
+    public BookServiceImpl(BookDao bookDaoxx, UserDao userDaoxx) {
+        this.bookDao = bookDaoxx;
+        this.userDao = userDaoxx;
     }
 
     public void save() {
