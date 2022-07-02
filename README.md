@@ -1,5 +1,9 @@
 # SSM
 ### Spring 
+*Bean Scope*
+1. default: singleton, only instantiate the class once when accessing a bean from ApplicationContext
+2. prototype: create multiple instances when accessing a bean from ApplicationContext multiple times 
+
 *Bean Lifecycle*
 
 1. initialize IOC container
