@@ -18,11 +18,14 @@ public class BookServiceImpl implements BookService, InitializingBean, Disposabl
         bookDao.save();
     }
 
+    //继承自DisposableBean， InitializingBean
     public void destroy() throws Exception {
-        System.out.println("service destroy");
+        //在bean销毁前执行
+        System.out.println("service destroy...");
     }
 
     public void afterPropertiesSet() throws Exception {
-        System.out.println("service init");
+        //在IOC中DI setters执行完后后执行
+        System.out.println("service init...");
     }
 }

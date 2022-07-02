@@ -10,6 +10,6 @@
 <!--    <bean id="orderDao" class="com.itheima.factory.OrderDaoFactory" factory-method="getOrderDao"/>-->
 
     <!--方式三：使用FactoryBean实例化bean-->
-    <bean id="userDao" class="com.itheima.factory.UserDaoFactoryBean" scope="singleton"/>
+    <bean id="userDao" class="com.itheima.factory.UserDaoFactoryBean"/>
 
 </beans>
