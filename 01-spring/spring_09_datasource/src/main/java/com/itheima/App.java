@@ -9,11 +9,15 @@ import javax.sql.DataSource;
 public class App {
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-//        DataSource dataSource = (DataSource) ctx.getBean("dataSource");
-//        System.out.println(dataSource);
+
+        DataSource dataSource1 = (DataSource) ctx.getBean("dataSource1");
+        System.out.println(dataSource1);
+
+        DataSource dataSource2 = (DataSource) ctx.getBean("dataSource2");
+        System.out.println(dataSource2);
+
 
         BookDao bookDao = (BookDao) ctx.getBean("bookDao");
         bookDao.save();
-
     }
 }

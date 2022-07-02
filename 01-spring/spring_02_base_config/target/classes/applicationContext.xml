@@ -8,7 +8,7 @@
         <property name="bookDao" ref="bookDao"/>
     </bean>
 
-    <!--scope：为bean设置作用范围，可选值为单例 singloton (默认)，非单例prototype-->
+    <!--scope：为bean设置作用范围，可选值为单例 singleton (默认)，非单例prototype-->
     <!--表现层view 业务层service 数据层dao 工具类utilities 适合造单例-->
     <bean id="bookDao" name="dao" class="com.itheima.dao.impl.BookDaoImpl" scope="prototype"/>
 </beans>
