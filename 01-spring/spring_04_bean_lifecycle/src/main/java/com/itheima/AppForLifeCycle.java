@@ -1,7 +1,6 @@
 package com.itheima;
 
 import com.itheima.dao.BookDao;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AppForLifeCycle {
