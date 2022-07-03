@@ -3,17 +3,21 @@ package com.itheima;
 import com.itheima.dao.BookDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class App {
     public static void main(String[] args) {
-        //1.加载类路径下的配置文件
+        //1.加载相对类路径下的配置文件
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-        //2.从文件系统下加载配置文件
-//        ApplicationContext ctx = new FileSystemXmlApplicationContext("D:\\workspace\\spring\\spring_10_container\\src\\main\\resources\\applicationContext.xml");
-//        BookDao bookDao = (BookDao) ctx.getBean("bookDao");
-//        BookDao bookDao = ctx.getBean("bookDao",BookDao.class);
-//        BookDao bookDao = ctx.getBean(BookDao.class);
-//        bookDao.save();
+
+
+        BookDao bookDao0 = (BookDao) ctx.getBean("bookDao");
+        BookDao bookDao1 = ctx.getBean("bookDao", BookDao.class);
+        // there must be 1 bookDao object in IOC container, or error
+        BookDao bookDao2 = ctx.getBean(BookDao.class);
+
+        // the 3 should be the same
+        System.out.println(bookDao0);
+        System.out.println(bookDao1);
+        System.out.println(bookDao2);
     }
 }

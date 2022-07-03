@@ -10,7 +10,7 @@ public class AppForBeanFactory {
     public static void main(String[] args) {
         Resource resources = new ClassPathResource("applicationContext.xml");
         BeanFactory bf = new XmlBeanFactory(resources);
-//        BookDao bookDao = bf.getBean(BookDao.class);
-//        bookDao.save();
+        BookDao bookDao = bf.getBean(BookDao.class);
+        bookDao.save();
     }
 }
