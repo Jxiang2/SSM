@@ -49,5 +49,15 @@
 <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl" autowire="byType"/>
 ```
 
+*Annotation Bean*
+
+*AOP (Proxy Pattern)*
+1. Spring IOC container is initialized
+2. read all used @Pointcut methods in classes with @Aspect
+3. IOC intialize beans; Check if beans have methods that match to @Pointcut methods
+    1. if a bean has no match, initialize it as an instance
+    2. if a bean (target) has a match, initialize a proxy instance to the target
+4. bean and proxies are all in IOC container and are used ...
+
 ### SpringBoot 
 ### MyBatis
