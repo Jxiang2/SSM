@@ -4,10 +4,10 @@ import com.itheima.dao.BookDao;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
-@Repository("bookDao")
+@Repository("bookDao1")
 public class BookDaoImpl implements BookDao {
-    //@Value：注入简单类型（无需提供set方法）
-    @Value("${name}")
+
+    @Value("${name}") //直接赋值，可加载 *.properties的值
     private String name;
 
     public void save() {
