@@ -1,4 +1,4 @@
-package com.xjy.dao;
+package com.itheima.dao;
 
 import java.util.Map;
 

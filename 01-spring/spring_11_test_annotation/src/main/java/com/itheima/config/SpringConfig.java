@@ -1,7 +1,7 @@
-package com.xjy.config;
+package com.itheima.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.xjy.dao.BookDao;
+import com.itheima.dao.BookDao;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.PropertySource;
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan({"com.xjy"})
+@ComponentScan({"com.itheima"})
 @PropertySource("jdbc.properties")
 public class SpringConfig {
     @Value("${driver}")

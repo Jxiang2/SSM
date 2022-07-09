@@ -1,6 +1,6 @@
-package com.xjy.service;
+package com.itheima.service;
 
-import com.xjy.dao.BookDao;
+import com.itheima.dao.BookDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

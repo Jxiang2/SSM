@@ -1,7 +1,7 @@
-package com.xjy;
-import com.xjy.config.SpringConfig;
-import com.xjy.dao.BookDao;
-import com.xjy.service.BookService;
+package com.itheima;
+
+import com.itheima.config.SpringConfig;
+import com.itheima.service.BookService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.Map;

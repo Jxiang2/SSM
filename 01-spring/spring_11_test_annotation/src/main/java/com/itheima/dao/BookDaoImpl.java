@@ -1,4 +1,4 @@
-package com.xjy.dao;
+package com.itheima.dao;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
