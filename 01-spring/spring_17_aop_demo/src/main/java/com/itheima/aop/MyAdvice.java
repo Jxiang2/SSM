@@ -17,14 +17,19 @@ public class MyAdvice {
     @Around("pt()")
     public Object around(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("------------------------------");
+
         Long startTime = System.currentTimeMillis();
+
         for (int i = 0 ; i<10000 ; i++) {
-            //调用原始操作
-            pjp.proceed();
+
+            pjp.proceed(); //调用原始操作
         }
+
         Long endTime = System.currentTimeMillis();
         Long totalTime = endTime-startTime;
+
         System.out.println("执行万次消耗时间：" + totalTime + "ms");
+
         return null;
     }
 
