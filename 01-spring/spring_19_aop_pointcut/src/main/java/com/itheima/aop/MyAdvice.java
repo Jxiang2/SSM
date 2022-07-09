@@ -18,7 +18,7 @@ public class MyAdvice {
 //    @Pointcut("execution(void com..*())")
 //    @Pointcut("execution(* com.itheima.*.*Service.find*(..))")
     //执行com.itheima包下的任意包下的名称以Service结尾的类或接口中的save方法，参数任意，返回值任意
-    @Pointcut("execution(* com.itheima.*.*Service.save(..))")
+    @Pointcut("execution(* com.itheima.*.*Service.save())")
     private void pt(){}
 
     @Before("pt()")

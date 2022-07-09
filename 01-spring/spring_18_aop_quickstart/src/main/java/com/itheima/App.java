@@ -10,5 +10,8 @@ public class App {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
         BookDao bookDao = ctx.getBean(BookDao.class);
         bookDao.update();
+
+        // proxy
+        System.out.println(bookDao.getClass());
     }
 }
