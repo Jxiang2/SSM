@@ -74,12 +74,12 @@
         ...
     }
     ```
-    2. create @Pointcut("excution()") decorated methods to match methods need to be processed.
+    2. create @Pointcut("excution()") decorated methods to match old methods need to be enhanced.
     ```
     @Pointcut("execution(* com.itheima.dao.BookDao.findName(..))")
     private void pt(){}
     ```
-    3. use @Before("pt()"), @After("pt()"), @Around("pt()") to decorate methods integrating old and new logics
+    3. use @Before("pt()"), @After("pt()"), @Around("pt()") to decorate methods for adding features to old methods
     ```
     @Before("pt()")
     public void beforeMethod(JoinPoint jp) {
