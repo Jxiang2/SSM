@@ -14,10 +14,10 @@ public class MybatisConfig {
     @Bean
     public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource){
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
-
+        //🔗抽象类包
         sqlSessionFactoryBean.setTypeAliasesPackage("com.itheima.domain");
+        //🔗数据源
         sqlSessionFactoryBean.setDataSource(dataSource);
-
         return sqlSessionFactoryBean;
     }
 
@@ -26,6 +26,7 @@ public class MybatisConfig {
     public MapperScannerConfigurer mapperScannerConfigurer(){
         MapperScannerConfigurer msc = new MapperScannerConfigurer();
 
+        //指定dao接口路径
         msc.setBasePackage("com.itheima.dao");
 
         return msc;
