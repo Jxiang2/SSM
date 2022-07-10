@@ -1,30 +1,16 @@
-import com.itheima.dao.AccountDao;
+import com.itheima.config.SpringConfig;
 import com.itheima.domain.Account;
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import com.itheima.service.AccountService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.io.IOException;
-import java.io.InputStream;
+public class App2 {
+    public static void main(String[] args) {
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
 
-public class App {
-    public static void main(String[] args) throws IOException {
-        // 1. 创建SqlSessionFactoryBuilder对象
-        SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
-        // 2. 加载SqlMapConfig.xml配置文件
-        InputStream inputStream = Resources.getResourceAsStream("SqlMapConfig.xml.bak");
-        // 3. 创建SqlSessionFactory对象
-        SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(inputStream);
-        // 4. 获取SqlSession
-        SqlSession sqlSession = sqlSessionFactory.openSession();
-        // 5. 执行SqlSession对象执行查询，获取结果User
-        AccountDao accountDao = sqlSession.getMapper(AccountDao.class);
+        AccountService accountService = ctx.getBean(AccountService.class);
 
-        Account ac = accountDao.findById(2);
+        Account ac = accountService.findById(1);
         System.out.println(ac);
-
-        // 6. 释放资源
-        sqlSession.close();
     }
 }
