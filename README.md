@@ -79,7 +79,7 @@
     @Pointcut("execution(* com.itheima.dao.BookDao.findName(..))")
     private void pt(){}
     ```
-    3. use @Before("pt()"), @After("pt()"), @Around("pt()") to decorate new logics and old method
+    3. use @Before("pt()"), @After("pt()"), @Around("pt()") to decorate methods integrating old and new logics
     ```
     @Before("pt()")
     public void beforeMethod(JoinPoint jp) {
