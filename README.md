@@ -66,7 +66,7 @@
         ...
     }
     ```
-    2. create @Pointcut("excution()") decorated methods to cover methods need to be processed.
+    2. create @Pointcut("excution()") decorated methods to match methods need to be processed.
     ```
     @Pointcut("execution(* com.itheima.dao.BookDao.findName(..))")
     private void pt(){}
