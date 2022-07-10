@@ -105,6 +105,52 @@
         return ret;
     }
     ```
+
+
+*JDBC & MyBatis*
+1. create a jdbc.properties file in resources dir to identify which database to connect and how to connect to it
+```
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/spring_db?useSSL=false
+jdbc.username=root
+jdbc.password=password
+```
+2. create JdbcConfig class decorated by @PropertySource("classpath:jdbc.properties"). It returns a DataSource bean
+```
+@Bean
+public DataSource dataSource(){
+    DruidDataSource ds = new DruidDataSource();
+    ds.setDriverClassName(driver);
+    ds.setUrl(url);
+    ds.setUsername(userName);
+    ds.setPassword(password);
+    return ds;
+```
+3. create MyBatisConfig class to 
+    1. create SqlSessionFactoryBean for generating SqlSessionFactory object
+    ```
+    @Bean
+    public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource){
+        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+        //🔗抽象类包
+        sqlSessionFactoryBean.setTypeAliasesPackage("com.itheima.domain");
+        //🔗数据源
+        sqlSessionFactoryBean.setDataSource(dataSource);
+        return sqlSessionFactoryBean;
+    }
+    ```
+    2. create MapperScannerConfigurer for accessing dao interface
+    ```
+    @Bean
+    public MapperScannerConfigurer mapperScannerConfigurer(){
+        MapperScannerConfigurer msc = new MapperScannerConfigurer();
+
+        //指定dao接口路径
+        msc.setBasePackage("com.itheima.dao");
+
+        return msc;
+    }
+    ```
   
 
 
