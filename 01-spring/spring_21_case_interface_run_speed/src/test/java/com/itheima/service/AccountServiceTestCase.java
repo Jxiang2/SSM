@@ -18,12 +18,12 @@ public class AccountServiceTestCase {
 
     @Test
     public void testFindById(){
-        Account ac = accountService.findById(2);
+        accountService.findById(2);
     }
 
     @Test
     public void testFindAll(){
-        List<Account> all = accountService.findAll();
+        accountService.findAll();
     }
 
 }
