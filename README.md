@@ -49,15 +49,56 @@
 <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl" autowire="byType"/>
 ```
 
-*Annotation Bean*
-
 *AOP (Proxy Pattern)*
-1. Spring IOC container is initialized
-2. read all used @Pointcut methods in classes with @Aspect
-3. IOC intialize beans; Check if beans have methods that match to @Pointcut methods
-    1. if a bean has no match, initialize it as an instance
-    2. if a bean (target) has a match, initialize a proxy instance to the target
-4. bean and proxies are all in IOC container and are used ...
+1. AOP workflow
+    1. Spring IOC container is initialized
+    2. read all used @Pointcut methods in classes with @Aspect
+    3. IOC intialize beans; Check if beans have methods that match to @Pointcut methods
+        1. if a bean has no match, initialize it as an instance
+        2. if a bean (target) has a match, initialize a proxy instance to the target
+    4. bean and proxies are all in IOC container and are used ...
+2. AOP practice
+    1. create @Aspect bean to hold aspects, the class is named *Advice
+    ```
+    @Component
+    @Aspect
+    public class MyAdvice {
+        ...
+    }
+    ```
+    2. create @Pointcut("excution()") decorated methods to cover methods need to be processed.
+    ```
+    @Pointcut("execution(* com.itheima.dao.BookDao.findName(..))")
+    private void pt(){}
+    ```
+    3. use @Before("pt()"), @After("pt()"), @Around("pt()") to decorate new logics and old method
+    ```
+    @Before("pt()")
+    public void beforeMethod(JoinPoint jp) {
+        Object[] args = jp.getArgs();
+        System.out.println(Arrays.toString(args));
+        System.out.println("before advice ..." );
+    }
+
+    @After("pt()")
+    public void afterMethod(JoinPoint jp) {
+        Object[] args = jp.getArgs();
+        System.out.println(Arrays.toString(args));
+        System.out.println("after advice ...");
+    }
+
+    //ProceedingJoinPoint：专用于环绕通知，是JoinPoint子类，可以实现对原始方法的调用
+    @Around("pt()")
+    public Object aroundMethod(ProceedingJoinPoint pjp) throws Throwable {
+        Object[] args = pjp.getArgs();
+        System.out.println(Arrays.toString(args));
+        args[0] = 666;
+        Object ret = pjp.proceed(args);
+        return ret;
+    }
+    ```
+  
+
 
 ### SpringBoot 
 ### MyBatis
