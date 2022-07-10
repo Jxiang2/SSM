@@ -24,12 +24,12 @@ public class MybatisConfig {
     //定义bean，返回MapperScannerConfigurer对象
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer(){
-        MapperScannerConfigurer msc = new MapperScannerConfigurer();
+        MapperScannerConfigurer mscBean = new MapperScannerConfigurer();
 
         //指定dao接口路径
-        msc.setBasePackage("com.itheima.dao");
+        mscBean.setBasePackage("com.itheima.dao");
 
-        return msc;
+        return mscBean;
     }
 }
 
