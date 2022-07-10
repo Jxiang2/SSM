@@ -6,8 +6,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class App {
     public static void main(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
+
         BookDao bookDao = ctx.getBean(BookDao.class);
-        String name = bookDao.findName(100,"itheima");
-        System.out.println(name);
+
+        try {
+            String name = bookDao.findName(100,"itheima");
+            System.out.println(name);
+        } catch (NullPointerException e) {
+            System.out.println("error!");
+        }
     }
 }
