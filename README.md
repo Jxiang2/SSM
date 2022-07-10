@@ -58,8 +58,16 @@
         2. if a bean (target) has a match, initialize a proxy instance to the target
     4. bean and proxies are all in IOC container and are used ...
 2. AOP practice
-    1. create @Aspect bean to hold aspects, the class is named *Advice
+    1. enable AOP in SpringConfig file; Create @Aspect bean to hold aspects, the class is named *Advice
     ```
+    // SpringConfig.java
+    @Configuration
+    @ComponentScan("com.itheima")
+    @EnableAspectJAutoProxy
+    public class SpringConfig {
+        ...
+    }
+    
     @Component
     @Aspect
     public class MyAdvice {
