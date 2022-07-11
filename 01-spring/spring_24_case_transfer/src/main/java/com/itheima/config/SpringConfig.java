@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan("com.itheima")
 @PropertySource("classpath:jdbc.properties")
 @Import({JdbcConfig.class,MybatisConfig.class})
-//开启注解式事务驱动
-@EnableTransactionManagement
+@EnableTransactionManagement //开启注解式事务驱动
 public class SpringConfig {
 }

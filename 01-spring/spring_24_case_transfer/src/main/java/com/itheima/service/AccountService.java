@@ -2,9 +2,6 @@ package com.itheima.service;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
 public interface AccountService {
     /**
      * 转账操作
