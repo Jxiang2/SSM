@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import javax.sql.DataSource;
 
 public class MybatisConfig {
+    // specify classes to map entities in db
     @Bean
     public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource){
         SqlSessionFactoryBean ssfb = new SqlSessionFactoryBean();
@@ -15,6 +16,7 @@ public class MybatisConfig {
         return ssfb;
     }
 
+    // specify interfaces to map SQL commands
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer(){
         MapperScannerConfigurer msc = new MapperScannerConfigurer();
