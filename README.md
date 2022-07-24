@@ -153,7 +153,7 @@ public DataSource dataSource(){
     ```
 4. JDBC transactions
     1. spring transaction manager is JDBC transaction manager
-    2. Basic workflow
+    2. basic workflow
         1. @transaction on a service layer interface method m1 to initialize transaction for this method. m1 is called **transaction coordinator**
         2. every jdbc operations used in this method join the transactions coordinated by m1, the **transaction coordinator**
         3. any runtime exceptions happened in the scope of m1 will cause db rollback to cancel all jdbc operations
