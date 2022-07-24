@@ -151,6 +151,14 @@ public DataSource dataSource(){
         return msc;
     }
     ```
+4. JDBC transactions
+    1. spring transaction manager is JDBC transaction manager
+    2. Basic workflow
+        1. @transaction on a service layer interface method m1 to initialize transaction for this method. m1 is called **transaction coordinator**
+        2. every jdbc operations used in this method join the transactions coordinated by m1, the **transaction coordinator**
+        3. any runtime exceptions happened in the scope of m1 will cause db rollback to cancel all jdbc operations
+    3. **independent child transaction coordinator** inside **parent transaction coordinator** should be annotated with 
+    ```@Transactional(propagation = Propagation.REQUIRES_NEW)``` to prevent rollbacks caused by parent
   
 
 
