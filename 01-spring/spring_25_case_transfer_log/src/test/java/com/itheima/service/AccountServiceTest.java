@@ -12,7 +12,6 @@ import java.io.IOException;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SpringConfig.class)
 public class AccountServiceTest {
-
     @Autowired
     private AccountService accountService;
 
@@ -20,5 +19,4 @@ public class AccountServiceTest {
     public void testTransfer() throws IOException {
         accountService.transfer("Tom","Jerry",50D);
     }
-
 }
