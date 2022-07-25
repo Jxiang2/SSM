@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
 public interface BookDao {
 
     @Insert("insert into tbl_book (type,name,description) values(#{type},#{name},#{description})")

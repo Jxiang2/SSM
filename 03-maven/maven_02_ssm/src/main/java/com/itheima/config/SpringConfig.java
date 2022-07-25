@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan({"com.itheima"})
+@ComponentScan({"com.itheima.service"})
 @PropertySource("classpath:jdbc.properties")
 @Import({JdbcConfig.class,MyBatisConfig.class})
 @EnableTransactionManagement
