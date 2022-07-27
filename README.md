@@ -161,6 +161,9 @@ public DataSource dataSource(){
     ```@Transactional(propagation = Propagation.REQUIRES_NEW)``` to prevent rollbacks caused by parent
   
 
+### Maven
+*Direct & Indirect Dependencies*
+![Screen Shot 2022-07-26 at 9 06 40 PM (2)](https://user-images.githubusercontent.com/46456200/181138503-2b1c9a2e-cb44-4193-8e9b-1f5c2173e777.png)
 
 ### SpringBoot 
 ### MyBatis
