@@ -1,0 +1,14 @@
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:27:45 -0400] "GET / HTTP/1.1" 404 949 http-bio-80-exec-1 133
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:27:45 -0400] "GET / HTTP/1.1" 404 949 http-bio-80-exec-3 5
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:27:46 -0400] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-80-exec-4 19
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:27:46 -0400] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-80-exec-5 2
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:27:50 -0400] "GET /plugins/elementui/index.css HTTP/1.1" 200 198714 http-bio-80-exec-6 113
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:27:50 -0400] "GET /js/vue.js HTTP/1.1" 200 311194 http-bio-80-exec-2 116
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:27:50 -0400] "GET /plugins/elementui/index.js HTTP/1.1" 200 494276 http-bio-80-exec-7 99
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:27:50 -0400] "GET /js/jquery.min.js HTTP/1.1" 200 86663 http-bio-80-exec-8 96
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:27:51 -0400] "GET /books HTTP/1.1" 200 129 http-bio-80-exec-2 517
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:28:24 -0400] "GET / HTTP/1.1" 404 949 http-bio-80-exec-1 354
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:28:28 -0400] "GET /books HTTP/1.1" 200 129 http-bio-80-exec-3 519
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:28:32 -0400] "GET /books/2 HTTP/1.1" 200 127 http-bio-80-exec-4 119
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:28:35 -0400] "PUT /books HTTP/1.1" 200 48 http-bio-80-exec-5 130
+0:0:0:0:0:0:0:1 - - [27/Jul/2022:13:28:35 -0400] "GET /books HTTP/1.1" 200 134 http-bio-80-exec-6 14
