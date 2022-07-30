@@ -1,0 +1,4 @@
+general guide for usability reason:
+    1. always declare the interface on the LHS
+    2. always declare the concrete implementation on the RHS
+    3. if an implementation of the interface should be used, do a recast
