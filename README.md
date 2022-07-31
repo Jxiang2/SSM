@@ -160,6 +160,13 @@ public DataSource dataSource(){
     3. **independent child transaction coordinator** inside **parent transaction coordinator** should be annotated with 
     ```@Transactional(propagation = Propagation.REQUIRES_NEW)``` to prevent rollbacks caused by parent
   
-
+### Maven
+*Maven Life Cycle*
+1. commonly used commands:
+    1.mvn compile - compile the source code, converts the .java files to .class and stores the classes in target/classes folder.
+    2.mvn package – take the compiled code and package it in its distributable format, such as a JAR or WAR (for fullstack web app),
+    3.mvn install – install the package into the local repository, for use as a dependency in other projects locally.
+2. full lifecycle: validate -> compile -> test -> package -> verify -> install -> deploy
+    
 ### SpringBoot 
 ### MyBatisPlus
