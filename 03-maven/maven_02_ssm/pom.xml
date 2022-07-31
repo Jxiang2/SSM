@@ -8,6 +8,7 @@
 
 
   <!--项目名称-->
+  <groupId>com.itheima</groupId>
   <artifactId>maven_02_ssm</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
@@ -47,6 +48,16 @@
         <configuration>
           <port>80</port>
           <path>/</path>
+        </configuration>
+      </plugin>
+
+      <!--无视web.xml-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
       </plugin>
     </plugins>
