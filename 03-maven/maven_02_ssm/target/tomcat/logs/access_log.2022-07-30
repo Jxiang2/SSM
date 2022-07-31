@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [30/Jul/2022:21:51:23 -0400] "GET /pages/books.html HTTP/1.1" 304 - http-bio-80-exec-1 195
+0:0:0:0:0:0:0:1 - - [30/Jul/2022:21:51:24 -0400] "GET /books HTTP/1.1" 200 209 http-bio-80-exec-3 460
+0:0:0:0:0:0:0:1 - - [30/Jul/2022:22:00:50 -0400] "GET /pages/books.html HTTP/1.1" 304 - http-bio-80-exec-1 100
+0:0:0:0:0:0:0:1 - - [30/Jul/2022:22:00:51 -0400] "GET /books HTTP/1.1" 200 209 http-bio-80-exec-3 697
+0:0:0:0:0:0:0:1 - - [30/Jul/2022:22:11:27 -0400] "GET /pages/books.html HTTP/1.1" 304 - http-bio-80-exec-1 193
+0:0:0:0:0:0:0:1 - - [30/Jul/2022:22:11:27 -0400] "GET /books HTTP/1.1" 200 209 http-bio-80-exec-3 494
+0:0:0:0:0:0:0:1 - - [30/Jul/2022:22:11:29 -0400] "GET /books/2 HTTP/1.1" 200 132 http-bio-80-exec-4 104
+0:0:0:0:0:0:0:1 - - [30/Jul/2022:22:11:32 -0400] "PUT /books HTTP/1.1" 200 48 http-bio-80-exec-5 132
+0:0:0:0:0:0:0:1 - - [30/Jul/2022:22:11:32 -0400] "GET /books HTTP/1.1" 200 211 http-bio-80-exec-6 16
+0:0:0:0:0:0:0:1 - - [30/Jul/2022:22:13:50 -0400] "GET /pages/books.html HTTP/1.1" 304 - http-bio-80-exec-1 86
+0:0:0:0:0:0:0:1 - - [30/Jul/2022:22:13:51 -0400] "GET /books HTTP/1.1" 200 211 http-bio-80-exec-3 670
