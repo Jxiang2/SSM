@@ -22,11 +22,11 @@ public class BookController {
 
     //使用Environment封装全配置数据
     @Autowired
-    private Environment environment;
+    private Environment env;
 
+    //使用配置对象读取配置文件
     @Autowired
     private Enterprise enterprise;
-
 
     @GetMapping("/{id}")
     public String getById(@PathVariable Integer id){
@@ -34,13 +34,13 @@ public class BookController {
         System.out.println(port);
         System.out.println(subject_00);
         System.out.println("--------------------");
-        System.out.println(environment.getProperty("lesson"));
-        System.out.println(environment.getProperty("server.port"));
-        System.out.println(environment.getProperty("enterprise.age"));
-        System.out.println(environment.getProperty("enterprise.subject[1]"));
+        System.out.println(env.getProperty("lesson"));
+        System.out.println(env.getProperty("server.port"));
+        System.out.println(env.getProperty("enterprise.age"));
+        System.out.println(env.getProperty("enterprise.subject[1]"));
         System.out.println("---------------------");
         System.out.println(enterprise);
-        return "hello , spring boot!";
+        return "hello , spring boot!" + id;
     }
 
 }
