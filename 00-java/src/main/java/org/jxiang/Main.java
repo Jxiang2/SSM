@@ -2,7 +2,7 @@ package org.jxiang;
 
 import java.util.*;
 
-class Main {
+public class Main {
     public static void main(String[] args) {
         // **array to List conversion
         String[] srcArr = {"c", "a", "b"};
@@ -89,5 +89,51 @@ class Main {
 
         // The int will be implicitly converted to a long,
         // which can always be done without any loss of information.
+
+        Child c1 = new Child("xjy", 12);
+        System.out.println(c1);
+    }
+}
+
+class Parent {
+    String name;
+    Integer age;
+
+    public Parent () {
+        System.out.println("parent is constructed");
+    }
+
+    public Parent (String name, Integer age) {
+        System.out.println("parent is constructed");
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Parent{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+
+class Child extends Parent {
+
+    public Child() {
+    }
+
+    public Child(String name, Integer age) {
+        super(name, age);
+        System.out.println("child is constructed");
+    }
+
+
+    @Override
+    public String toString() {
+        return "Child{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

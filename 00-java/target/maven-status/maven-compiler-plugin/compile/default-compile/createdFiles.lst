@@ -1,3 +1,4 @@
+org/jxiang/Parent.class
 org/jxiang/objs/Demo.class
 org/jxiang/oopInterface/CityBike.class
 org/jxiang/calculatorApp/Multiply.class
@@ -15,6 +16,7 @@ org/jxiang/generics/Demo.class
 org/jxiang/functionals/lambdaAndAIC/TestLambdas$1.class
 org/jxiang/objs/Student.class
 org/jxiang/collections/SetCollection.class
+org/jxiang/Child.class
 org/jxiang/excepts/ExceptionDemo.class
 org/jxiang/annotations/MyTable.class
 org/jxiang/generics/DualGenericHolder.class
