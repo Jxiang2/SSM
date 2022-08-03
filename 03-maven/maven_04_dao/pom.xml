@@ -4,9 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+
+    <!--项目名称-->
     <groupId>com.itheima</groupId>
     <artifactId>maven_04_dao</artifactId>
     <version>1.0-SNAPSHOT</version>
+
 
     <!--继承关系-->
     <parent>
@@ -16,6 +19,8 @@
         <relativePath>../maven_01_parents/pom.xml</relativePath>
     </parent>
 
+
+    <!--依赖， mybatis继承自父模块，无需写版本-->
     <dependencies>
         <dependency>
             <groupId>com.itheima</groupId>

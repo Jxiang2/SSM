@@ -4,18 +4,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!--项目名称-->
     <groupId>com.itheima</groupId>
     <artifactId>maven_01_parents</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+
+    <!--表明此模块是父模块-->
     <modules>
         <module>../maven_02_ssm</module>
         <module>../maven_03_pojo</module>
         <module>../maven_04_dao</module>
     </modules>
 
-    <!--自定义属性-->
+
+    <!--自定义属性, 记录此pom.xml依赖属性，子模块可通过.properties的${}访问-->
     <properties>
         <spring.version>5.2.10.RELEASE</spring.version>
         <junit.version>4.12</junit.version>
@@ -24,6 +28,7 @@
             jdbc:mysql://localhost:3306/spring_db?allowPublicKeyRetrieval=true&amp;useSSL=false
         </jdbc-url.version>
     </properties>
+
 
     <!--依赖-->
     <dependencies>
@@ -77,7 +82,8 @@
         </dependency>
     </dependencies>
 
-    <!--定义依赖管理, 不强制要求子类继承-->
+
+    <!--定义依赖管理以提供给子模块, 不强制要求子类继承，不会出现在父类依赖中-->
     <dependencyManagement>
         <dependencies>
             <!--maven_04_dao专用依赖-->
@@ -96,6 +102,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 
     <build>
         <resources>
