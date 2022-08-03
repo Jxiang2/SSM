@@ -167,6 +167,7 @@ public DataSource dataSource(){
     2.mvn package – take the compiled code and package it in its distributable format, such as a JAR or WAR (for fullstack web app),
     3.mvn install – install the package into the local repository, for use as a dependency in other projects locally.
 2. Full Lifecycle: validate -> compile -> test -> package -> verify -> install -> deploy
+3. Clean before each lifecycle
     
 ### SpringBoot 
 ### MyBatisPlus
