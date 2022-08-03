@@ -31,11 +31,11 @@ public class TestAnnotations {
 
 @MyTable("db_student")
 class MyStudent {
-    @MyField(colName = "db_id", type = "int", length = 5)
+    @MyField(colName = "id", type = "int", length = 5)
     private int id;
-    @MyField(colName = "db_age", type = "int", length = 3)
+    @MyField(colName = "age", type = "int", length = 3)
     private int age;
-    @MyField(colName = "db_name", type = "varchar", length = 10)
+    @MyField(colName = "name", type = "char", length = 10)
     private String name;
 
     public MyStudent(int id, int age, String name) {
